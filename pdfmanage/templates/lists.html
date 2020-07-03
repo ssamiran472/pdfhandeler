@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>index</title>
+</head>
+
+<body>
+    {% for list in lists %}
+        <a href='{% url "view_file" file_name=list %}' target='_blank'>
+            <p>{{list|slice:":-4"}}</P>
+        </a>
+    {% endfor %}
+</body>
+</html>
